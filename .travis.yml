@@ -14,8 +14,10 @@ os:
 
 env:
   matrix:
-    - TARGETS="check"
-    - TARGETS="testsuite"
+#    - TARGETS="check"
+#    - TARGETS="testsuite"
+    - TARGETS="package"
+  
 
   global:
     # Cross-compile for amd64 only to speed up testing.
