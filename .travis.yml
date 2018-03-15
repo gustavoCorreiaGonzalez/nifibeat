@@ -14,9 +14,9 @@ os:
 
 env:
   matrix:
-#    - TARGETS="check"
-#    - TARGETS="testsuite"
-    - TARGETS="package"
+    - TARGETS="check"
+    - TARGETS="testsuite"
+#    - TARGETS="package"
   
 
   global:
