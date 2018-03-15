@@ -1,0 +1,18 @@
+# This is a sample build configuration for Go.
+# Check our guides at https://confluence.atlassian.com/x/5Q4SMw for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: golang:1.7
+
+pipelines:
+  default:
+    - step:
+        deployment: test
+        script: # Installing the command to run on the command line
+          - apt-get update && apt-get install -y virtualenv
+          - apt-get install -y software-properties-common python-software-properties
+          - cd go/src/github.com/nifibeat/
+          - make package
+        services:
+          - docker
