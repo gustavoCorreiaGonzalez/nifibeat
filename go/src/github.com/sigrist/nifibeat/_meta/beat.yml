@@ -1,0 +1,11 @@
+################### Nifibeat Configuration Example #########################
+
+############################# Nifibeat ######################################
+
+nifibeat:
+  # The URL endpoint to call by Nifibeat
+  url:  http://nifi.armen.domrock.com.br/nifi-api/process-groups/root/process-groups
+  # HTTP method to use.
+  method: get
+  # Period of requests
+  period: 10s
